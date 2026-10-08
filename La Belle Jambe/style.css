@@ -1,0 +1,1142 @@
+/* =====================================================
+   LA BELLE JAMBÉ
+   STYLE PRINCIPAL
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --cream: #f5f0e5;
+    --cream-light: #faf7ef;
+
+    --yellow: #d8bb70;
+
+    --black: #101716;
+    --black-soft: #202725;
+
+    --green: #0d2c25;
+
+    --white: #ffffff;
+
+    --border: rgba(16, 23, 22, 0.18);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    line-height: 1.5;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.header-container,
+.hero-container,
+.eco-container,
+.services,
+.tarifs-container,
+.contact-container,
+.footer-container {
+
+    width: min(1180px, calc(100% - 60px));
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    background: var(--cream);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.header-container {
+
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* petit logo */
+
+.mini-logo {
+
+    width: 75px;
+
+}
+
+
+.mini-logo img {
+
+    width: 100%;
+
+}
+
+
+/* navigation */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+nav a {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    position: relative;
+
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--black);
+
+    transition: width 0.2s ease;
+
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* bouton */
+
+.contact-button {
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.contact-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    padding: 90px 0;
+
+    background: var(--cream-light);
+
+}
+
+
+.hero-container {
+
+    min-height: 500px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.75fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+}
+
+
+/* texte */
+
+.hero-text {
+
+    max-width: 600px;
+
+}
+
+
+.small-title {
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(50px, 6vw, 82px);
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.description {
+
+    max-width: 540px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* bouton */
+
+.main-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 23px;
+
+    background: var(--black);
+
+    color: white;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+
+}
+
+
+.main-button span {
+
+    font-size: 20px;
+
+}
+
+
+.main-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* logo */
+
+.hero-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.hero-logo img {
+
+    width: min(430px, 100%);
+
+    /* Si ton logo possède déjà son fond jaune,
+       il apparaîtra naturellement ici. */
+
+}
+
+
+/* =====================================================
+   BANDEAU ÉCO-RESPONSABLE
+===================================================== */
+
+.eco-section {
+
+    background: var(--green);
+
+    color: white;
+
+}
+
+
+.eco-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+
+.eco-item {
+
+    min-height: 155px;
+
+    padding: 25px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-right: 1px solid rgba(255,255,255,0.25);
+    
+    border-left: 1px solid rgba(255,255,255,0.25);
+
+}
+
+.eco-icon {
+
+    font-size: 27px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.eco-item h3 {
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+
+}
+
+
+.eco-item p {
+
+    font-size: 11px;
+
+    opacity: 0.75;
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+
+    padding-top: 120px;
+
+    padding-bottom: 120px;
+
+}
+
+
+.section-title {
+
+    margin-bottom: 60px;
+
+}
+
+
+.section-title p {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-title h2 {
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(45px, 5vw, 68px);
+
+    text-transform: uppercase;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+}
+
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-left: 1px solid var(--border);
+
+}
+
+
+.service-card {
+
+    min-height: 270px;
+
+    padding: 35px;
+
+    border-right: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.service-number {
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 14px;
+
+    opacity: 0.5;
+
+}
+
+
+.service-card h3 {
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 32px;
+
+    text-transform: uppercase;
+
+    margin-top: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.service-card p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    max-width: 320px;
+
+    opacity: 0.75;
+
+}
+
+
+/* =====================================================
+   TARIFS
+===================================================== */
+
+.tarifs {
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 120px 0;
+
+}
+
+
+.tarifs .section-title {
+
+    margin-bottom: 70px;
+
+}
+
+
+.tarif-block {
+
+    border-top: 1px solid rgba(255,255,255,0.25);
+
+    padding-top: 35px;
+
+    margin-bottom: 70px;
+
+}
+
+
+.tarif-heading {
+
+    margin-bottom: 30px;
+
+}
+
+
+.tarif-heading h3 {
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 35px;
+
+    text-transform: uppercase;
+
+}
+
+
+.tarif-heading p {
+
+    font-size: 13px;
+
+    margin-top: 8px;
+
+    opacity: 0.8;
+
+}
+
+
+.tarif-heading small {
+
+    font-size: 11px;
+
+    opacity: 0.55;
+
+}
+
+
+/* lignes */
+
+.tarif-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.tarif-line {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+}
+
+
+.tarif-line div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.tarif-line strong {
+
+    font-size: 15px;
+
+}
+
+
+.tarif-line span {
+
+    font-size: 12px;
+
+    opacity: 0.6;
+
+    margin-top: 3px;
+
+}
+
+
+.price {
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 30px !important;
+
+    white-space: nowrap;
+
+}
+
+
+/* tarifs simples */
+
+.simple-tarif {
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    gap: 20px;
+
+}
+
+
+.simple-tarif span {
+
+    font-size: 14px;
+
+}
+
+
+.simple-tarif strong {
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+
+    padding: 110px 0;
+
+    background: var(--cream);
+
+}
+
+
+.contact-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+}
+
+
+.contact-small {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.contact h2 {
+
+    font-family: "Oswald", sans-serif;
+
+    text-transform: uppercase;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+
+}
+
+
+.phone {
+
+    display: inline-block;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    border-bottom: 3px solid var(--black);
+
+}
+
+
+.contact-logo {
+
+    width: 250px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: var(--green);
+
+    color: white;
+
+}
+
+
+.footer-container {
+
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    font-size: 12px;
+
+}
+
+
+.footer-container div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.footer-container strong {
+
+    font-size: 15px;
+
+}
+
+
+.footer-container span {
+
+    opacity: 0.6;
+
+}
+
+
+.footer-container a {
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .header-container,
+    .hero-container,
+    .eco-container,
+    .services,
+    .tarifs-container,
+    .contact-container,
+    .footer-container {
+
+        width: min(100% - 40px, 1180px);
+
+    }
+
+
+    nav {
+
+        gap: 18px;
+
+    }
+
+
+    .hero-container {
+
+        grid-template-columns: 1fr 0.7fr;
+
+        gap: 40px;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+
+    /* HEADER */
+
+    .header-container {
+
+        height: 70px;
+
+    }
+
+
+    .mini-logo {
+
+        width: 60px;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .contact-button {
+
+        padding: 10px 15px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding: 60px 0;
+
+    }
+
+
+    .hero-container {
+
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: auto;
+
+        gap: 50px;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-text {
+
+        text-align: center;
+
+    }
+
+
+    h1 {
+
+        font-size: 52px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        font-size: 15px;
+
+    }
+
+
+    .main-button {
+
+        margin: auto;
+
+    }
+
+
+    .hero-logo img {
+
+        width: 250px;
+
+        margin: auto;
+
+    }
+
+
+    /* BANDEAU */
+
+    .eco-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .eco-item {
+
+        min-height: 130px;
+
+    }
+
+
+    .eco-item:nth-child(3),
+    .eco-item:nth-child(4) {
+
+        border-top: 1px solid rgba(255,255,255,0.25);
+
+    }
+
+
+    /* SERVICES */
+
+    .services {
+
+        padding-top: 80px;
+
+        padding-bottom: 80px;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .service-card {
+
+        min-height: 230px;
+
+    }
+
+
+    /* TARIFS */
+
+    .tarifs {
+
+        padding: 80px 0;
+
+    }
+
+
+    .tarif-line {
+
+        align-items: flex-start;
+
+        padding: 20px 0;
+
+    }
+
+
+    .tarif-line div {
+
+        max-width: 75%;
+
+    }
+
+
+    .price {
+
+        font-size: 25px !important;
+
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+
+        padding: 80px 0;
+
+    }
+
+
+    .contact-container {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .contact-logo {
+
+        width: 200px;
+
+    }
+
+
+    .phone {
+
+        font-size: 30px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        padding: 30px 0;
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
